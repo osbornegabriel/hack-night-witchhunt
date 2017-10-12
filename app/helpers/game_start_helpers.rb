@@ -23,7 +23,7 @@ helpers do
     end
 
     def assign_priest(position, game_id)
-      Player.new(game_id: game.id, role: "Priest", alignment: "villager", position: position)
+      Player.create(game_id: game_id, role: "Priest", alignment: "villager", position: position)
     end
 
     def starting_roles
@@ -40,4 +40,5 @@ helpers do
       else
         return 5
     end
+  end
 end
