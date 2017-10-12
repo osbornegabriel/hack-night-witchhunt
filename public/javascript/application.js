@@ -21,14 +21,14 @@ assignRoles = function(){
       console.log(response);
       console.log("You started a game!")
       $('#game').html(response);
-      $('#game').prepend("<h2>Please Assign Roles As Shown</h2")
+      $('#game').prepend("<h2>Please Assign Roles As Shown</h2>")
     })
   })
 }
 
 startGame = function(){
   console.log("Load game script");
-  $('#game').on("click", 'button', function(event){
+  $('#game').on("click", '#start', function(event){
     console.log("Game Started");
     $.ajax({
       method: 'GET',
