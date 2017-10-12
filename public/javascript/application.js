@@ -20,6 +20,8 @@ assignRoles = function(){
     }).done(function(response){
       console.log(response);
       console.log("You started a game!")
+      $('#game').html(response);
+      $('#game').prepend("<h2>Please Assign Roles As Shown</h2")
     })
   })
 }

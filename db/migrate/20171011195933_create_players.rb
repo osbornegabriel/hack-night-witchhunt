@@ -5,6 +5,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :alignment, default: "villager"
       t.integer :game_id, null: false
       t.string  :role
+      t.boolean  :alive, default: true
       t.timestamps
     end
   end

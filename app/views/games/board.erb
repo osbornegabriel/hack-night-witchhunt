@@ -1,0 +1,4 @@
+<p>Players are numerically listed starting from your left, moving clockwise</p>
+<% @players.each do |player| %>
+  <%= erb :"players/_player", layout: false, locals: {player: player} %>
+<% end %>

@@ -14,4 +14,8 @@ post '/games' do
   "yay"
   @game = Game.create(player_count: params["player-count"])
   assign_roles(@game)
+  if request.xhr?
+    @players = @game.players.sort_by{|player| player.position}
+    erb :"games/board", layout: false
+  end
 end
