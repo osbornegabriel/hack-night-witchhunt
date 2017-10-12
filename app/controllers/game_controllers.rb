@@ -12,4 +12,6 @@ post '/games' do
   p "88" * 88
   p params
   "yay"
+  @game = Game.create(params["player-count"])
+  assign_roles(@game)
 end
